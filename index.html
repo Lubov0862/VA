@@ -13,13 +13,14 @@
     <style>
         /* --- ПЕРЕМЕННЫЕ И СБРОС --- */
         :root {
-            --color-burgundy: #5D001E; /* Глубокий кутюрный бордо */
+            --color-purple: #4B0082; /* Темно-фиолетовый */
             --color-gold: #C5A059;     /* Благородное золото */
             --color-gold-light: #E5C580;
             --color-white: #ffffff;
-            --color-gray-light: #F9F9F9;
-            --color-gray-dark: #2C2C2C;
-            --text-main: #333333;
+            --color-purple-light: #2E1A47; /* Темно-фиолетовый светлый */
+            --color-purple-dark: #1A0E2E; /* Очень темный фиолетовый */
+            --color-text-light: #E0E0E0; /* Светлый текст */
+            --color-text-dark: #333333; /* Темный текст */
             --font-serif: 'Playfair Display', serif;
             --font-sans: 'Lato', sans-serif;
             --transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
@@ -37,15 +38,15 @@
 
         body {
             font-family: var(--font-sans);
-            color: var(--text-main);
-            background-color: var(--color-white);
+            color: var(--color-text-light);
+            background-color: var(--color-purple-light);
             line-height: 1.8;
             overflow-x: hidden;
         }
 
         h1, h2, h3 {
             font-family: var(--font-serif);
-            color: var(--color-burgundy);
+            color: var(--color-purple);
             font-weight: 700;
         }
 
@@ -94,11 +95,11 @@
             font-family: var(--font-serif);
             font-size: 1.6rem;
             font-weight: 700;
-            color: var(--color-burgundy);
+            color: var(--color-gold);
             letter-spacing: 2px;
             text-transform: uppercase;
         }
-        
+
         .logo span {
             color: var(--color-gold);
             font-style: italic;
@@ -115,12 +116,12 @@
             font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--color-gray-dark);
+            color: var(--color-text-dark);
             position: relative;
         }
 
         nav a:hover {
-            color: var(--color-burgundy);
+            color: var(--color-purple);
         }
 
         nav a::after {
@@ -141,7 +142,7 @@
         .mobile-menu-btn {
             display: none;
             font-size: 1.5rem;
-            color: var(--color-burgundy);
+            color: var(--color-purple);
             cursor: pointer;
         }
 
@@ -165,7 +166,7 @@
             content: '';
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(60, 0, 20, 0.4)),
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(75, 0, 130, 0.4)),
                         url('Hero - 1.png');
             background-size: cover;
             background-position: center;
@@ -228,7 +229,7 @@
         /* --- О ПРИЛОЖЕНИИ --- */
         .about {
             padding: 100px 10%;
-            background-color: var(--color-white);
+            background-color: var(--color-purple-light);
             display: flex;
             align-items: center;
             gap: 80px;
@@ -240,10 +241,10 @@
         }
 
         .about-image img {
-            box-shadow: 30px 30px 0 var(--color-gray-light);
+            box-shadow: 30px 30px 0 var(--color-purple-light);
             transition: var(--transition);
         }
-        
+
         .about-image:hover img {
             transform: scale(1.02);
             box-shadow: 40px 40px 0 var(--color-gold);
@@ -254,6 +255,7 @@
         }
 
         .section-title {
+            color: var(--color-gold);
             font-size: 3rem;
             margin-bottom: 30px;
             position: relative;
@@ -271,7 +273,7 @@
 
         .about-content p {
             font-size: 1.1rem;
-            color: #555;
+            color: var(--color-text-light);
             margin-bottom: 25px;
             font-weight: 300;
             text-align: justify;
@@ -280,7 +282,7 @@
         /* --- УСЛУГИ --- */
         .services {
             padding: 100px 5%;
-            background-color: var(--color-gray-light);
+            background-color: var(--color-purple-light);
             text-align: center;
         }
 
@@ -330,7 +332,7 @@
             object-fit: cover;
             transition: transform 1s ease;
         }
-        
+
         .service-card:hover .service-img {
             transform: scale(1.1);
         }
@@ -346,7 +348,7 @@
         .service-info h3 {
             font-size: 1.4rem;
             margin-bottom: 15px;
-            color: var(--color-burgundy);
+            color: var(--color-purple);
             letter-spacing: 1px;
         }
 
@@ -354,14 +356,14 @@
             font-family: var(--font-sans);
             font-style: normal;
             font-size: 0.95rem;
-            color: #666;
+            color: #000000;
             line-height: 1.6;
         }
 
         /* --- КОНТАКТЫ --- */
         .contact {
             padding: 120px 20px;
-            background-color: var(--color-gray-dark);
+            background-color: var(--color-purple-dark);
             color: var(--color-white);
             text-align: center;
             position: relative;
@@ -376,13 +378,13 @@
         .contact-box {
             max-width: 900px;
             margin: 0 auto;
-            background: rgba(44, 44, 44, 0.85);
+            background: rgba(26, 14, 46, 0.85);
             padding: 60px;
             border: 1px solid rgba(197, 160, 89, 0.3);
             backdrop-filter: blur(5px);
             transition: var(--transition);
         }
-        
+
         .contact-box:hover {
             transform: scale(1.02);
             border-color: var(--color-gold);
@@ -406,15 +408,15 @@
 
         /* --- ПОДВАЛ --- */
         footer {
-            background-color: var(--color-gray-dark);
-            color: #999;
+            background-color: var(--color-purple-dark);
+            color: var(--color-text-light);
             padding: 40px;
             text-align: center;
             font-size: 0.85rem;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
-        
+
         footer span {
             color: var(--color-gold);
         }
